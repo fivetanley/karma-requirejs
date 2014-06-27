@@ -1,7 +1,7 @@
 // monkey patch requirejs, to use append timestamps to sources
 // to take advantage of karma's heavy caching
 // it would work even without this hack, but with reloading all the files all the time
-
+var console = window.console || {log: function(){}, error: function(){} };
 var normalizePath = function(path) {
   var normalized = [];
   var parts = path.split('/');
